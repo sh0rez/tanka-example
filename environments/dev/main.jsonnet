@@ -1,12 +1,18 @@
-local app = import "ntppool/app.libsonnet";
-app + {
- params+:: {
-   ntppool+:: {
-     image: "quay.io/ntppool/ntppool:latest",
-   },
+// import the library
+local ntppool = import 'ntppool/ntppool.libsonnet';
 
- },
- config+:: {
-        manage_tls: "no",
+ntppool + {
+  // override some config keys
+  _config+:: {
+    ntppool+:: {
+      manage_tls: 'no',
+      config+:: {
+        db_dsn: "fooDSN",
+        db_user: "myUser"
+      }
     },
+  },
+  _images+:: {
+    ntppool: 'quay.io/ntppool/ntppool:latest',
+  },
 }
