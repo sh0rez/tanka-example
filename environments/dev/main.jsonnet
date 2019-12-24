@@ -4,6 +4,11 @@ local ntppool = import 'ntppool/ntppool.libsonnet';
 ntppool + {
   // override some config keys
   _config+:: {
+
+    // this doesn't seem to work, 'tk show ...' sets up
+    // two replicas despite an override here.
+    replicas: 1,
+
     ntppool+:: {
       manage_tls: 'no',
       config+:: {

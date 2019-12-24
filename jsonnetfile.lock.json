@@ -21,6 +21,15 @@
       },
       "version": "8f9d72b2e35b5f3cc1b7c2a8af9bbae7658804e2",
       "sum": "8gmmSMANOAs4dfP5a09Y+nE9pd8E4TMpk3YPKxT4ys0="
+    },
+    {
+      "name": "tanka-example",
+      "source": {
+        "local": {
+          "directory": "."
+        }
+      },
+      "version": ""
     }
   ]
 }
