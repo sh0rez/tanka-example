@@ -19,6 +19,15 @@
         }
       },
       "version": "master"
+    },
+    {
+      "name": "tanka-example",
+      "source": {
+        "local": {
+          "directory": "."
+        }
+      },
+      "version": ""
     }
   ]
 }
